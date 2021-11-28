@@ -70,3 +70,32 @@ const addition = (a, b) => {
     return a + b;
 };
 console.log(addition(19, 25));
+class EmpDetails {
+    constructor(id, name) {
+        this.id = id;
+        this.name = name;
+    }
+    login() {
+        return `${this.name} logged in successfuly`;
+    }
+}
+const shreyas = new EmpDetails(5, "Shreyas");
+console.log(shreyas.login());
+//subclasses inside the class
+class employeeStatus extends EmpDetails {
+    constructor(id, name, status) {
+        super(id, name);
+        this.position = status;
+    }
+}
+const emp = new employeeStatus(455, "Shreyas", "Senior Engineer");
+// generics
+function functionArray(items) {
+    return new Array().concat(items);
+}
+let numarr = functionArray([2, 54, 4, 6, 6]);
+let stringarr = functionArray(["Shreyas", "Praveen", "Manohara"]);
+// <T> in the sense type where as it can take any type
+stringarr.push("Manuuuu");
+// stringarr.push(7); cannot
+console.log(stringarr);

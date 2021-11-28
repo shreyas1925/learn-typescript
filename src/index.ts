@@ -128,3 +128,55 @@ const addition: sum = (a: number, b: number): number => {
 };
 
 console.log(addition(19, 25));
+
+// Classes with interfaces
+
+interface Details {
+  id: number;
+  name: string;
+}
+
+class EmpDetails implements Details {
+  id: number;
+  name: string;
+
+  constructor(id: number, name: string) {
+    this.id = id;
+    this.name = name;
+  }
+
+  login() {
+    return `${this.name} logged in successfuly`;
+  }
+}
+
+const shreyas = new EmpDetails(5, "Shreyas");
+console.log(shreyas.login());
+
+//subclasses inside the class
+
+class employeeStatus extends EmpDetails {
+  position: string;
+
+  constructor(id: number, name: string, status: string) {
+    super(id, name);
+    this.position = status;
+  }
+}
+
+const emp = new employeeStatus(455, "Shreyas", "Senior Engineer");
+
+// generics
+
+function functionArray<T>(items: T[]): T[] {
+  return new Array().concat(items);
+}
+
+let numarr = functionArray<number>([2, 54, 4, 6, 6]);
+let stringarr = functionArray<string>(["Shreyas", "Praveen", "Manohara"]);
+
+// <T> in the sense type where as it can take any type
+
+stringarr.push("Manuuuu");
+// stringarr.push(7); cannot
+console.log(stringarr);
