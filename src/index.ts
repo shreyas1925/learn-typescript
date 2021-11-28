@@ -178,5 +178,7 @@ let stringarr = functionArray<string>(["Shreyas", "Praveen", "Manohara"]);
 // <T> in the sense type where as it can take any type
 
 stringarr.push("Manuuuu");
+stringarr.push("xyz");
+
 // stringarr.push(7); cannot
 console.log(stringarr);
