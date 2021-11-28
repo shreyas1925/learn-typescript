@@ -32,8 +32,6 @@ var Day;
 // if i initialize one value using string then I have to do it for all ... It does not increment as it does for number
 console.log(Day.afternoon);
 console.log(Day[2]);
-// Objects in TypeScript -----> 🚀
-// In tuple array or something we can use many types of datatypes but in objects we can specify each and every one what contains what type of data
 const employee = {
     empid: 74,
     empname: "Shreyas",
@@ -45,3 +43,27 @@ console.log(employee.empid);
 //   empid:number ,
 //   empname: "Shreyas",
 // };
+// Type assertions
+let cid = 90; //only from "any" type we can go for other type not like number to string and stuffs
+let new_cid = cid;
+// or
+let new__cid = cid;
+new_cid = "444";
+new__cid = 444;
+console.log(new_cid);
+console.log(new__cid);
+// Functions
+const average = (a, b) => {
+    return (a + b) / 2;
+};
+console.log(average(5, 4));
+const greet = (name) => {
+    console.log(`Hello ✌️ Welcome to Typescript ${name}`);
+};
+greet("Shreyas");
+const students = {
+    studid: 5,
+    studname: "Benjamin",
+    gender: "male",
+};
+// Functions in Typescript

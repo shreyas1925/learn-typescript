@@ -48,10 +48,13 @@ console.log(Day[2]);
 
 // In tuple array or something we can use many types of datatypes but in objects we can specify each and every one what contains what type of data
 
-const employee: {
+type Emp = {
+  //we can also do in this way other than writing these stuffs in the part where Emp is written in employee object
   empid: number;
   empname: string;
-} = {
+};
+
+const employee: Emp = {
   empid: 74,
   empname: "Shreyas",
 };
@@ -64,3 +67,52 @@ console.log(employee.empid);
 //   empid:number ,
 //   empname: "Shreyas",
 // };
+
+// Type assertions
+
+let cid: any = 90; //only from "any" type we can go for other type not like number to string and stuffs
+
+let new_cid = cid as string;
+
+// or
+
+let new__cid = <number>cid;
+
+new_cid = "444";
+new__cid = 444;
+console.log(new_cid);
+console.log(new__cid);
+
+// Functions
+
+const average = (a: number, b: number): number => {
+  return (a + b) / 2;
+};
+
+console.log(average(5, 4));
+
+const greet = (name: string | number): void => {
+  console.log(`Hello ✌️ Welcome to Typescript ${name}`);
+};
+greet("Shreyas");
+
+// interfaces
+
+//same like objects but there are some differences and extra features
+// interface is like defined strutured we have go on it's way
+
+interface Students {
+  //some extra features like
+  readonly gender: string;
+  age?: number; // ? stands for optional
+  studid: number;
+  studname: string;
+}
+
+const students: Students = {
+  studid: 5,
+  studname: "Benjamin",
+  gender: "male",
+};
+
+// Functions in Typescript
