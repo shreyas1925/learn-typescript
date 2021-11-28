@@ -116,3 +116,15 @@ const students: Students = {
 };
 
 // Functions in Typescript
+
+interface sum {
+  (x: number, y: number): number;
+  //in interface i am declaring right here that what my
+  // variales datatye are and I cannot change this in function
+}
+
+const addition: sum = (a: number, b: number): number => {
+  return a + b;
+};
+
+console.log(addition(19, 25));

@@ -66,4 +66,7 @@ const students = {
     studname: "Benjamin",
     gender: "male",
 };
-// Functions in Typescript
+const addition = (a, b) => {
+    return a + b;
+};
+console.log(addition(19, 25));
