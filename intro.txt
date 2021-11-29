@@ -5,3 +5,8 @@ Typescript --> a superset of javascript it means what all we have in javascript 
 Why to use typeScript --> we will get this once we just with typeScript becuase typeScript is statically designed so that we get out errors in out compile time and
 and also we can declare what type of datatype we need . These are just the very much basic use of Typescript over javascript <---> As and when i explore typeScript I will be 
 updating this file
+
+In tsconfig.json we can edit any commands
+
+
+
